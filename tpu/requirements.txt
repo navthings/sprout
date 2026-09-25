@@ -1,0 +1,7 @@
+jax[tpu]>=0.7.0
+numpy
+datasets>=2.18.0
+transformers
+safetensors
+psutil
+matplotlib

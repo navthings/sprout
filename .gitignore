@@ -1,0 +1,11 @@
+# weights, checkpoints and downloaded data stay local
+sft/hf-chat/
+sft/sft_ckpt/
+sft/sft_data/
+*.gguf
+*.safetensors
+
+.venv/
+__pycache__/
+.ipynb_checkpoints/
+.DS_Store
