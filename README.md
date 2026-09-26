@@ -15,9 +15,6 @@ the next one after [lilbase](https://github.com/navthings/lilbase). bigger base 
 
 28 layers, d=1280, 20 query heads, 4 kv heads, 1024 context, llama tokenizer. adamw with the optimizer state sharded over the 8 chips, wsd lr schedule (warmup, flat, decay over the last 15%).
 
-one kaggle session gets through about 8.4 hours, then it saves and stops. the full run is ~22,900 steps, so it takes three sessions and a bit. instructions for resuming are at the top of the notebook.
-
-the checkpoints and kaggle notebook are still called `lilbase2` inside the code since the run was already a third of the way done when this got renamed. changing it would break resuming.
 
 ## sft/ (chat finetune)
 
@@ -39,3 +36,11 @@ ollama run navthings/lilchat
 ```
 
 it gets the format right and says hi properly. facts and maths are mostly made up, it's 297m params. same script goes on the new base model once it finishes.
+
+
+## ambitions
+
+the goals for sprout are to:
+
+1. beat gpt2 extralarge (1.5b) or get close to it
+2. finetune it to a competitive coding model for 500M
