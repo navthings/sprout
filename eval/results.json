@@ -14,30 +14,55 @@
     "params_m": 297.0,
     "lambada_acc": 0.285,
     "lambada_ppl": 53.77953295610651,
-    "hellaswag_acc_norm": 0.332,
+    "hellaswag_acc_norm": 0.3675,
     "arc_easy_acc_norm": 0.4810606060606061,
     "fineweb_edu_bpb": 0.9092434606003841,
     "wikitext_bpb": 1.2433023819984341,
-    "seconds": 1504
+    "seconds": 1504,
+    "hella_v2": true
   },
   "gpt2-medium": {
     "params_m": 354.8,
     "lambada_acc": 0.443,
     "lambada_ppl": 16.628992763269267,
-    "hellaswag_acc_norm": 0.3575,
+    "hellaswag_acc_norm": 0.402,
     "arc_easy_acc_norm": 0.44696969696969696,
     "fineweb_edu_bpb": 0.933433264683914,
     "wikitext_bpb": 1.1168707794457304,
-    "seconds": 1709
+    "seconds": 1709,
+    "hella_v2": true
   },
   "sprout-chat": {
     "params_m": 522.7,
     "lambada_acc": 0.3925,
     "lambada_ppl": 23.631403082324773,
-    "hellaswag_acc_norm": 0.3725,
+    "hellaswag_acc_norm": 0.4055,
     "arc_easy_acc_norm": 0.5025252525252525,
     "fineweb_edu_bpb": 0.9595058295611736,
     "wikitext_bpb": 1.3122273151006736,
-    "seconds": 2755
+    "seconds": 2755,
+    "hella_v2": true
+  },
+  "gpt2-large": {
+    "params_m": 774.0,
+    "lambada_acc": 0.4865,
+    "lambada_ppl": 11.77490329935336,
+    "hellaswag_acc_norm": 0.425,
+    "arc_easy_acc_norm": 0.48484848484848486,
+    "fineweb_edu_bpb": 0.8857241082006083,
+    "wikitext_bpb": 1.0706569380790942,
+    "seconds": 8672,
+    "hella_v2": true
+  },
+  "gpt2-xl": {
+    "params_m": 1557.6,
+    "lambada_acc": 0.512,
+    "lambada_ppl": 10.096233865541308,
+    "hellaswag_acc_norm": 0.461,
+    "arc_easy_acc_norm": 0.4983164983164983,
+    "fineweb_edu_bpb": 0.8602648747158044,
+    "wikitext_bpb": 1.041938047459254,
+    "seconds": 6393,
+    "hella_v2": true
   }
 }

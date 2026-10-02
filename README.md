@@ -16,14 +16,23 @@ it's small, so it makes stuff up with total confidence. it does know the capital
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/vs_gpt2_dark.svg">
-  <img alt="sprout and lilbase vs openai's gpt-2 on arc-easy and lambada" src="assets/vs_gpt2_light.svg">
+  <img alt="sprout and lilbase vs openai gpt-2 on hellaswag, arc-easy and lambada" src="assets/vs_gpt2_light.svg">
 </picture>
 
 every model gets the exact same few thousand questions, none of which it trained on, all scored by the same script on my macbook. a dot above the grey gpt-2 line beats a gpt-2 of the same size.
 
-on arc-easy (grade school science questions) sprout gets 50.3%, ahead of gpt-2 medium at 44.7%. on lambada (guess the last word of a passage from a novel) gpt-2 wins.
+| model | params | hellaswag | arc-easy | lambada |
+|---|---|---|---|---|
+| gpt-2 small | 124m | 35.1% | 40.6% | 35.0% |
+| lilbase | 297m | 36.8% | 48.1% | 28.5% |
+| gpt-2 medium | 355m | 40.2% | 44.7% | 44.3% |
+| **sprout (chat)** | **523m** | **40.6%** | **50.2%** | **39.2%** |
+| gpt-2 large | 774m | 42.5% | 48.5% | 48.6% |
+| gpt-2 xl | 1.5b | 46.1% | 49.8% | 51.2% |
 
-this is the chat version of sprout, since the base weights are still on kaggle, and chat finetuning usually costs a few points on tests like these. gpt-2 large and xl, and a fixed hellaswag run, are still going. the script is [`eval/bench.py`](eval/bench.py).
+on arc-easy (grade school science questions) sprout beats every gpt-2, even xl, which is three times its size. on hellaswag (pick the ending that makes sense for a short story) its level with gpt-2 medium. on lambada (guess the last word of a passage from a novel) gpt-2 wins clearly. my guess is the data: sprout mostly read educational web text, gpt-2 read pages linked from reddit, and lambada is all novels.
+
+this is the chat version of sprout, since the base weights are still on kaggle, and chat finetuning usually costs a few points on tests like these. the script is [`eval/bench.py`](eval/bench.py).
 
 ## what it is
 
