@@ -9,3 +9,14 @@ sft/sft_data/
 __pycache__/
 .ipynb_checkpoints/
 .DS_Store
+
+# eval scratch
+eval/*.log
+eval/bench_old.py
+eval/bench_v1.py
+eval/results_v1.json
+eval/check_same.py
+eval/section_*.html
+eval/site_bench.py
+eval/__pycache__/
+sft_out/
