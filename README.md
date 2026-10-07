@@ -78,6 +78,41 @@ python chat.py                 # talk to it in the terminal
 
 `--base` defaults to lilbase's hf folder (`../lilbase/mac/hf`). point it at any llama style hf folder with the same tokenizer.
 
+## run sprout offline
+
+the sft model can also run directly on apple silicon with mlx.
+
+convert the hf checkpoint to mlx:
+
+```bash
+mlx_lm.convert \
+  --hf-path ~/Documents/Projects/sprout/sprout-chat \
+  --mlx-path ~/Documents/Projects/sprout/sproutoffline \
+  --dtype float16
+```
+
+then run the chat model:
+
+```bash
+mlx_lm.chat --model ~/Documents/Projects/sprout/sproutoffline
+```
+
+or use the small python cli:
+
+```bash
+python3 sproutoffline/chat.py
+```
+
+it keeps the conversation in memory and supports:
+
+```text
+/clear  clear conversation
+/help   show commands
+/bye    exit
+```
+
+this runs locally with mlx on apple silicon. the fp16 checkpoint is about 1gb.
+
 ## `eval/`
 
 `bench.py` runs every model through lambada, hellaswag, arc-easy and two held-out reading tests, and saves `results.json` after each model so a crash doesn't lose anything. `readme_chart.py` makes the chart above from it.

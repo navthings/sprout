@@ -20,3 +20,5 @@ eval/section_*.html
 eval/site_bench.py
 eval/__pycache__/
 sft_out/
+
+sproutoffline/model.safetensors
