@@ -22,3 +22,8 @@ eval/__pycache__/
 sft_out/
 
 sproutoffline/model.safetensors
+
+# local exports and old eval scratch
+hf/
+eval/old/
+eval/results_backup_*.json

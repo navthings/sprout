@@ -86,15 +86,15 @@ convert the hf checkpoint to mlx:
 
 ```bash
 mlx_lm.convert \
-  --hf-path ~/Documents/Projects/sprout/sprout-chat \
-  --mlx-path ~/Documents/Projects/sprout/sproutoffline \
+  --hf-path ~/Documents/Projects/models/sprout/sft_out/sprout-chat \
+  --mlx-path ~/Documents/Projects/models/sprout/sproutoffline \
   --dtype float16
 ```
 
 then run the chat model:
 
 ```bash
-mlx_lm.chat --model ~/Documents/Projects/sprout/sproutoffline
+mlx_lm.chat --model ~/Documents/Projects/models/sprout/sproutoffline
 ```
 
 or use the small python cli:
